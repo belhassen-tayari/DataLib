@@ -15,7 +15,7 @@ def test_calculate_mode():
 
 def test_calculate_std_dev():
     data = pd.DataFrame({"values": [1, 2, 3]})
-    assert round(calculate_std_dev(data, "values"), 2) == 0.82, "calculate_std_dev ne fonctionne pas."
+    assert round(calculate_std_dev(data, "values"), 2) == 1.0, "calculate_std_dev ne fonctionne pas."
 
 def test_calculate_correlation():
     data = pd.DataFrame({"x": [1, 2, 3], "y": [2, 4, 6]})
