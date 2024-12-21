@@ -6,19 +6,22 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'datalib'
+project = 'Datalib'
 copyright = '2024, Belhassen Tayari'
 author = 'Belhassen Tayari'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = []
+extensions = [
+    'sphinx.ext.autodoc',
+    'sphinx.ext.napoleon',
+    'sphinx.ext.viewcode',
+]
 
 templates_path = ['_templates']
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+exclude_patterns = []
 
-root_doc = 'documentation'
 
 
 # -- Options for HTML output -------------------------------------------------
@@ -30,8 +33,5 @@ html_static_path = ['_static']
 
 import os
 import sys
-sys.path.insert(0, os.path.abspath('../src'))
-
-# Ajouter un thème
-html_theme = 'sphinx_rtd_theme'
-
+sys.path.insert(0, os.path.abspath('../../src'))
+html_theme = 'furo'
